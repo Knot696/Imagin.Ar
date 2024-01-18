@@ -1,0 +1,254 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "light";
+}
+@font-face {
+  font-family: "black";
+  src: url(./componentes/fonts/Montserrat-Black.otf);
+}
+@font-face {
+  font-family: "extraBold";
+  src: url(./componentes/fonts/Montserrat-ExtraBold.otf);
+}
+@font-face {
+  font-family: "bold";
+  src: url(./componentes/fonts/Montserrat-Bold.otf);
+}
+@font-face {
+  font-family: "light";
+  src: url(./componentes/fonts/Montserrat-Light.otf);
+}
+@font-face {
+  font-family: "medium";
+  src: url(./componentes/fonts/Montserrat-Medium.otf);
+}
+@font-face {
+  font-family: "regular";
+  src: url(./componentes/fonts/Montserrat-Regular.otf);
+}
+body{
+  background-image: url('./componentes/fondo.png');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+header{
+  margin-bottom: 20px;
+}
+button{
+  position: absolute;
+  top: 6.5vw;
+  right: 2vw;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 7vw;
+  height: auto;
+}
+button span{
+  border-radius: 5px;
+  background-color: black;
+  display: block;
+  width: 100%;
+  height: 0.8vw;
+  margin: 1vw auto;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+button.open .linea1{
+  animation-name: linea1;
+}
+button.open .linea2{
+  animation-name: linea2;
+}
+button.open .linea3{
+  animation-name: linea3;
+}
+.linea1{
+  animation-name: linea1Cerrado;
+}
+.linea2{
+  animation-name: linea2Cerrado;
+}
+.linea3{
+  animation-name: linea3Cerrado;
+}
+.articulos{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+}
+h1{
+  font-family: "medium";
+  text-decoration: underline;
+  font-size: 6vw;
+  width: 100vw;
+  text-align: center;
+  position: absolute;
+  margin-bottom: 5px;
+  animation: aparecer 5s forwards;
+}
+.titulo{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.flecha{
+  position: absolute;
+}
+main{
+  width: 95vw;
+}
+img{
+  width: 100vw;
+}
+.img1{
+  border-bottom-right-radius: 20px;
+}
+.img2{
+  width: 95vw;
+  margin-left: 5vw;
+}
+.articulo1{
+  display: flex;
+  gap: 4%;
+  width: 100vw;
+  justify-content: flex-start;
+}
+ul{
+  font-size: 3.1vw;
+  list-style: none;
+}
+li{
+  font-family: "regular";
+}
+.articulo1 img{
+  width: 65%;
+  height: 100%;
+}
+footer{
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer{
+  width: 30%;
+  height: 100%;
+  margin: 20px;
+}
+.img3{
+  width: 50%;
+  margin: 10px;
+  border-radius: 10px;
+}
+@keyframes linea1 {
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(2.5vw) rotate(-45deg);
+  }
+}
+@keyframes linea3 {
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(1vw) rotate(45deg);
+  }
+}
+@keyframes linea2 {
+  50%, 100%{
+    margin: 0 auto;
+    opacity: 0;
+  }
+}
+@keyframes linea1Cerrado {
+  0%{
+    margin: 0 auto;
+    transform: translateY(2.5vw) rotate(-45deg);
+  }
+  50%, 100%{
+    margin: 1vw auto;
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes linea3Cerrado {
+  0%{
+    margin: 0 auto;
+    transform: translateY(-1.5vw) rotate(45deg);
+  }
+  50%, 100%{
+    margin: 1vw auto;
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes linea2Cerrado {
+  0%{
+    margin: 1vw auto;
+    opacity: 0;
+  }
+  50%, 100%{
+    margin: 0 auto;
+    opacity: 1;
+  }
+}
+.logo{
+  width: 100%;
+}
+.nav2{
+  display: none;
+}
+
+@keyframes aparecer {
+  0%{
+    filter: opacity(0%);
+  }
+  100%{
+    filter: opacity(100%);
+  }
+}
+
+@media (min-width: 900px) {
+  header{
+    display: none;
+  }
+  .nav2{
+    display: block;
+    background-image: url('./componentes/logo.png');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: 100px;
+  }
+
+  .navegacion{
+    height: 30px;
+    position: relative;
+    top: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .enlace{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    height: 110%;
+    border-right: 2px solid white;
+  }
+  .navegacion a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.5vw;
+    padding-right: 5px;
+    padding-left: 5px;
+    transition: 0.5s;
+  }
+  .navegacion a:hover{
+    color: white;
+  }
+}
