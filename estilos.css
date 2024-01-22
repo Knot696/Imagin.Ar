@@ -130,13 +130,13 @@ main{
 }
 .img1{
   width: 40vw;
-  height: 100%;
+  height: auto;
   border-bottom-right-radius: 20px;
-  animation: aparecerLateralI 2s forwards;
+  animation: aparecerLateralI 3s forwards;
 }
 .img2{
-  width: 80vw;
-  height: 100%;
+  width: 90vw;
+  height: auto;
   animation: aparecerLateralI2 3s forwards;
 }
 .articulo1{
@@ -262,6 +262,12 @@ footer{
 }
 
 @media (min-width: 900px) {
+  body{
+    background-image: url('./componentes/fondo1.png');
+    background-position: top;
+    background-size:cover;
+    width: 100vw;
+  }
   header{
     display: none;
   }
@@ -270,7 +276,7 @@ footer{
     background-image: url('./componentes/logo.png');
     background-repeat: no-repeat;
     background-size: 100vw;
-    height: 100px;
+    height: 6vw;
   }
 
   .navegacion{
@@ -282,6 +288,7 @@ footer{
     justify-content: flex-end;
   }
   .enlace{
+    font-family: medium;
     display: flex;
     align-items: center;
     align-items: center;
@@ -298,5 +305,54 @@ footer{
   }
   .navegacion a:hover{
     color: white;
+  }
+  h1{
+    position: static;
+    width: auto;
+    font-size: 2vw;
+    padding-left: 32vw;
+  }
+  .flecha{
+    width: 30vw;
+  }
+  .titulo{
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .articulos{
+    flex-direction: row-reverse;
+    gap: 0;
+  }
+  .articulo1{
+    flex-direction: row-reverse;
+  }
+  .img1{
+    width: 28vw;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    animation: none;
+    border-radius: 0;
+  }
+  .img2{
+    position: absolute;
+    left: 0;
+    width: 35vw;
+    height: auto;
+    animation: none;
+  }
+  ul{
+    position: absolute;
+    font-size: 1.2vw;
+    animation: none;
+    left: 36vw;
+  }
+  .imgFooter{
+    width: 10vw;
+    bottom: 30px;
+    left: 30px;
+    height: auto;
+    position: absolute;
   }
 }
