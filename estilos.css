@@ -50,7 +50,7 @@ nav{
   transition: 1s;
 }
 article{
-  padding: 2%;
+  padding: 4%;
   display: grid;
   width: auto;
   justify-content: center;
@@ -59,7 +59,9 @@ article{
   row-gap: 20px;
 }
 article img{
+  border-radius: 10px;
   width: 100%;
+  box-shadow: 0 0 5px 1px black;
 }
 a{
   font-family: "bold";
