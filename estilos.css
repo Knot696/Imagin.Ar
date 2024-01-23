@@ -49,15 +49,23 @@ nav{
   z-index: 3;
   transition: 1s;
 }
-.desplegado{
-  left: 0px;
+article{
+  padding: 2%;
+  display: grid;
+  width: auto;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 2%;
+  row-gap: 20px;
+}
+article img{
+  width: 100%;
 }
 a{
   font-family: "bold";
   color: black;
   text-decoration: none;
 }
-
 button{
   position: absolute;
   top: 6.5vw;
@@ -89,28 +97,6 @@ button.open .linea2{
 button.open .linea3{
   animation-name: linea3;
 }
-.linea1{
-  animation-name: linea1Cerrado;
-}
-.linea2{
-  animation-name: linea2Cerrado;
-}
-.linea3{
-  animation-name: linea3Cerrado;
-}
-.articulos{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 5vw;
-}
-.titulo{
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  animation: aparecer 2s forwards;
-}
 h1{
   font-family: "medium";
   text-decoration: underline;
@@ -122,10 +108,51 @@ h1{
   margin-bottom: 5px;
   padding-left: 10vw;
 }
-.flecha{
+main{
   width: 100vw;
 }
-main{
+ul{
+  font-size: 3vw;
+  list-style: none;
+  animation: aparecerLateralI2 3s forwards;
+}
+li{
+  font-family: "medium";
+}
+footer{
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 20px;
+}
+.desplegado{
+  left: 0px;
+}
+.linea1{
+  animation-name: linea1Cerrado;
+}
+.linea2{
+  animation-name: linea2Cerrado;
+}
+.linea3{
+  animation-name: linea3Cerrado;
+}
+.articulos{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+}
+.titulo{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  animation: aparecer 2s forwards;
+}
+
+.flecha{
   width: 100vw;
 }
 .img1{
@@ -146,21 +173,6 @@ main{
   width: 100vw;
   justify-content: flex-start;
 }
-ul{
-  font-size: 3vw;
-  list-style: none;
-  animation: aparecerLateralI2 3s forwards;
-}
-li{
-  font-family: "medium";
-}
-footer{
-  display: flex;
-  width: 100vw;
-  justify-content: space-around;
-  align-items: flex-end;
-  padding-bottom: 20px;
-}
 .imgFooter{
   width: 30%;
   height: 100%;
@@ -168,6 +180,52 @@ footer{
 .img3{
   width: 50%;
   border-radius: 10px;
+}
+
+.logo{
+  width: 100%;
+}
+.nav2{
+  display: none;
+}
+
+.wap img{
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 1px black;
+  animation: wap 4s forwards;
+  transition: 0.2s;
+}
+.wap img:hover{
+  filter: opacity(1);
+  filter: saturate(1.5);
+}
+.mensajew{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 25px;
+  right: 15px;
+}
+.mensaje{
+  color: white;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 55px;
+  right: 6px;
+  font-family: "medium";
+  font-size: 18px;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  animation: cabi 8s forwards;
+  z-index: 0;
 }
 @keyframes linea1 {
   50%, 100%{
@@ -217,13 +275,6 @@ footer{
     opacity: 1;
   }
 }
-.logo{
-  width: 100%;
-}
-.nav2{
-  display: none;
-}
-
 @keyframes aparecer {
   0%{
     filter: opacity(0%);
@@ -251,6 +302,40 @@ footer{
     transform: translateX(0px);
   }
 }
+@keyframes wap {
+  0%{
+    transform: translatey(100px);
+  }
+  70%{
+    transform: translatey(100px);
+  }
+  80%{
+    transform: translatey(-3px);
+  }
+  85%{
+    transform: translatey(3px);
+  }
+  90%{
+    transform: translatey(-2px);
+  }
+  95%{
+    transform: translatey(1px);
+  }
+  100%{
+    transform: translatey(0px);
+  }
+}
+@keyframes cabi {
+  0%{
+    opacity: 0%;
+  }
+  93%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
 
 @media (min-width: 900px) {
   body{
@@ -269,7 +354,6 @@ footer{
     background-size: 100vw;
     height: 6vw;
   }
-
   .navegacion{
     height: 30px;
     position: relative;
@@ -321,7 +405,6 @@ footer{
     width: 28vw;
     height: auto;
     position: absolute;
-    bottom: 0;
     right: 10vw;
     animation: none;
     border-radius: 0;
@@ -344,6 +427,6 @@ footer{
     bottom: 30px;
     left: 30px;
     height: auto;
-    position: absolute;
+    position: fixed;
   }
 }
