@@ -418,6 +418,15 @@ footer{
     height: auto;
     animation: none;
   }
+  .img3{
+    position: absolute;
+    left: 15vw;
+    bottom: 10px;
+    width: 20vw;
+    height: auto;
+    animation: none;
+    border-radius: 0px;
+  }
   ul{
     position: absolute;
     font-size: 1.2vw;
