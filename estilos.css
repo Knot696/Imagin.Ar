@@ -183,7 +183,9 @@ footer{
   width: 50%;
   border-radius: 10px;
 }
-
+.img4{
+  display: none;
+}
 .logo{
   width: 100%;
 }
@@ -339,13 +341,7 @@ footer{
   }
 }
 
-@media (min-width: 900px) {
-  body{
-    background-image: url('./componentes/fondo1.png');
-    background-position: top;
-    background-size:cover;
-    width: 100vw;
-  }
+@media (min-width: 600px) {
   header{
     display: none;
   }
@@ -357,9 +353,57 @@ footer{
     height: 6vw;
   }
   .navegacion{
+    width: 100vw;
     height: 30px;
     position: relative;
-    top: 1.5vw;
+    top: 1.1vw;
+    display: flex;
+    align-items: center;
+    padding-left: 27vw;
+  }
+  .enlace{
+    font-family: medium;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    height: 110%;
+    border-right: 2px solid white;
+  }
+  .navegacion a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.5vw;
+    padding-right: 5px;
+    padding-left: 5px;
+    transition: 0.5s;
+  }
+  .navegacion a:hover{
+    color: white;
+  }
+}
+@media (min-width: 900px) {
+  body{
+    background-image: url('./componentes/fondo1.png');
+    background-position: top;
+    background-size:cover;
+    width: 100vw;
+  }
+  header{
+    width: 100vw;
+    display: none;
+  }
+  .nav2{
+    display: block;
+    background-image: url('./componentes/logo.png');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: 6vw;
+  }
+  .navegacion{
+    width: 100vw;
+    height: 30px;
+    position: relative;
+    top: 1.8vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -387,7 +431,7 @@ footer{
     position: static;
     width: auto;
     font-size: 2vw;
-    padding-left: 32vw;
+    padding-left: 33vw;
   }
   .flecha{
     width: 30vw;
@@ -404,7 +448,7 @@ footer{
     flex-direction: row-reverse;
   }
   .img1{
-    width: 28vw;
+    width: 27vw;
     height: auto;
     position: absolute;
     right: 10vw;
@@ -420,12 +464,21 @@ footer{
   }
   .img3{
     position: absolute;
-    left: 15vw;
-    bottom: 10px;
-    width: 20vw;
+    left: 17vw;
+    bottom: 5px;
+    width: 17.5vw;
     height: auto;
     animation: none;
     border-radius: 0px;
+  }
+  .img4{
+    display: block;
+    width: 8vw;
+    height: auto;
+    position: absolute;
+    right: 1vw;
+    top: 20vw;
+    border-radius: 0;
   }
   ul{
     position: absolute;
@@ -439,5 +492,8 @@ footer{
     left: 30px;
     height: auto;
     position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
   }
 }
