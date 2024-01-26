@@ -360,7 +360,8 @@ footer{
     gap:0;
   }
   a{
-    font-size: 1vw;
+    font-size: 1.1vw;
+    text-align: center;
     font-family: medium;
     display: flex;
     align-items: center;
@@ -370,6 +371,7 @@ footer{
     border-right: 2px solid white;
     justify-content: center;
     transition: 0.5s;
+    padding-top: 0.5vw;
   }
   a:hover{
     color: white;
