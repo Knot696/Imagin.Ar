@@ -1,4 +1,4 @@
-const nav= document.querySelector('.nav');
+const nav= document.querySelector('button');
 const desplegable= document.querySelector('nav');
 
 nav.addEventListener('click', ()=>{

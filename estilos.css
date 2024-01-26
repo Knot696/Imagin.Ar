@@ -35,20 +35,6 @@ body{
   background-size:cover;
   width: 100vw;
 }
-
-nav{
-  position: absolute;
-  top: 0px;
-  left: -100vw;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding: 40px;
-  height: 100vh;
-  gap: 15px;
-  z-index: 3;
-  transition: 1s;
-}
 article{
   padding: 4%;
   display: grid;
@@ -67,6 +53,19 @@ a{
   font-family: "bold";
   color: black;
   text-decoration: none;
+}
+nav{
+  position: absolute;
+  top: 0px;
+  left: -100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px;
+  height: 100vh;
+  gap: 15px;
+  z-index: 3;
+  transition: 1s;
 }
 button{
   position: absolute;
@@ -189,10 +188,6 @@ footer{
 .logo{
   width: 100%;
 }
-.nav2{
-  display: none;
-}
-
 .wap img{
   height: 40px;
   width: 40px;
@@ -229,7 +224,6 @@ footer{
   height: 20px;
   border-radius: 10px;
   animation: cabi 8s forwards;
-  z-index: 0;
 }
 @keyframes linea1 {
   50%, 100%{
@@ -342,42 +336,42 @@ footer{
 }
 
 @media (min-width: 600px) {
-  header{
+  .logo{
     display: none;
   }
-  .nav2{
-    display: block;
+  button{
+    display: none;
+  }
+  nav{
+    position: relative;
+    left: 0;
+    width: 100vw;
+    height: 5.5vw;
     background-image: url('./componentes/logo.png');
     background-repeat: no-repeat;
     background-size: 100vw;
-    height: 6vw;
-  }
-  .navegacion{
-    width: 100vw;
-    height: 30px;
-    position: relative;
-    top: 1.1vw;
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
+    flex-direction: row;
     align-items: center;
-    padding-left: 27vw;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 28vw;
+    gap:0;
   }
-  .enlace{
+  a{
+    font-size: 1vw;
     font-family: medium;
     display: flex;
     align-items: center;
     align-items: center;
-    height: 110%;
+    width: 100%;
+    height: 100%;
     border-right: 2px solid white;
-  }
-  .navegacion a{
-    color: black;
-    text-decoration: none;
-    font-size: 1.5vw;
-    padding-right: 5px;
-    padding-left: 5px;
+    justify-content: center;
     transition: 0.5s;
   }
-  .navegacion a:hover{
+  a:hover{
     color: white;
   }
 }
@@ -387,45 +381,6 @@ footer{
     background-position: top;
     background-size:cover;
     width: 100vw;
-  }
-  header{
-    width: 100vw;
-    display: none;
-  }
-  .nav2{
-    display: block;
-    background-image: url('./componentes/logo.png');
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    height: 6vw;
-  }
-  .navegacion{
-    width: 100vw;
-    height: 30px;
-    position: relative;
-    top: 1.8vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .enlace{
-    font-family: medium;
-    display: flex;
-    align-items: center;
-    align-items: center;
-    height: 110%;
-    border-right: 2px solid white;
-  }
-  .navegacion a{
-    color: black;
-    text-decoration: none;
-    font-size: 1.5vw;
-    padding-right: 5px;
-    padding-left: 5px;
-    transition: 0.5s;
-  }
-  .navegacion a:hover{
-    color: white;
   }
   h1{
     position: static;
