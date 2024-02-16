@@ -376,6 +376,15 @@ footer{
   a:hover{
     color: white;
   }
+  .contacto{
+    position: absolute;
+    left: 0;
+    width: 55vw;
+    height: auto;
+    animation: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }
 @media (min-width: 900px) {
   body{
