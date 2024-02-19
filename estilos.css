@@ -127,6 +127,14 @@ footer{
   align-items: flex-end;
   padding: 20px;
 }
+.inicio{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.inicio img{
+  width: 80vw;
+}
 .desplegado{
   left: 0px;
 }
@@ -398,6 +406,9 @@ footer{
     width: auto;
     font-size: 2vw;
     padding-left: 33vw;
+  }
+  .inicio img{
+    width: 50vw;
   }
   .flecha{
     width: 30vw;
